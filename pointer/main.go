@@ -21,4 +21,11 @@ func main() {
 	*d = 45
 	fmt.Printf("d := c, *d = 45\n now a = %v, b = %v\n c = %v, *c = %v, d = %v\n",
 		a, b, c, *c, d)
+
+	e := "I am a string"
+
+	// You can't do this since "cannot use &e (type *string) as type *int in assignment"
+	// c = &e
+	f := &e
+	fmt.Printf("\nWhat's the difference between a *int and a *string?: c(*int): %v, f(*string): %v\n", c, f)
 }
